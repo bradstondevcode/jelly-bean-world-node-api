@@ -1,0 +1,5 @@
+applications:
+  - name: Jellybean World Node API
+memory: 64M
+routes:
+  - route: jelly-bean-world-node-api-<your-initials>.<region-server>.cf.appdomain.cloud
