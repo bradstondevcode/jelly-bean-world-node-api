@@ -70,9 +70,7 @@ function formatErrorResponse(error){
 app.get('/getWorlds', function (req, res) {
 
   axios({
-    method: 'get',
-    url: `${usersDBURL}/worlds/_all_docs`,
-    headers: {'Authorization': `Basic ${authKeyEncode}`}
+    //1 - Add Code Here
   })
   .then(response => {
     res.send(formatGeneralResponse(response))
@@ -92,9 +90,7 @@ app.post('/getWorld', function (req, res) {
   var worldName = req.body.worldName
 
   axios({
-    method: 'get',
-    url: `${usersDBURL}/worlds/${worldName}`,
-    headers: {'Authorization': `Basic ${authKeyEncode}`}
+    //2 - Add Code Here
   })
   .then(response => {
     res.send(formatGeneralResponse(response))
@@ -113,10 +109,7 @@ app.post('/createWorld', function (req, res) {
   var newWorldTemplateData = req.body.newWorldTemplateData
 
   axios({
-    method: 'post',
-    url: `${usersDBURL}/worlds`,
-    headers: {'Authorization': `Basic ${authKeyEncode}`},
-    data: newWorldTemplateData
+    //3 - Add Code Here
   })
   .then(response => {
     res.send(formatGeneralResponse(response))
@@ -135,10 +128,7 @@ app.post('/updateJellyBeanCount', function (req, res) {
   var updatedWorldData = req.body.updatedWorldData
 
   axios({
-    method: 'put',
-    url: `${usersDBURL}/worlds/${updatedWorldData["_id"]}`,
-    headers: {'Authorization': `Basic ${authKeyEncode}`},
-    data: updatedWorldData
+    //4 - Add Code Here
   })
   .then(response => {
     res.send(formatGeneralResponse(response))
@@ -158,9 +148,7 @@ app.post('/deleteWorld', function (req, res) {
   var rev = req.body.rev
 
   axios({
-    method: 'delete',
-    url: `${usersDBURL}/worlds/${worldName}?rev=${rev}`,
-    headers: {'Authorization': `Basic ${authKeyEncode}`},
+    //5 - Add Code Here
   })
   .then(response => {
     res.send(formatGeneralResponse(response))
